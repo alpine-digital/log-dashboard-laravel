@@ -1,0 +1,12 @@
+# Optional DDEV convenience for the Log Dashboard package.
+#
+# Copy this file into your project's .ddev/ folder and run `ddev restart` to
+# automatically open the log dashboard in a new browser tab every time
+# `ddev start` finishes. DDEV merges every .ddev/config.*.yaml, so this adds
+# the hook without touching your main config.yaml.
+#
+# The command is generic (no hostname), so the same file works in any project.
+# If you changed the dashboard's route_prefix, update the path below to match.
+hooks:
+  post-start:
+    - exec-host: "ddev launch log-dashboard"

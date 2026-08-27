@@ -1,0 +1,26 @@
+{
+    "name": "alpinedigital/log-dashboard-Laravel",
+    "description": "In-project log viewer for local development — reads the host project's own storage/logs, no SSH.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.42.0|^11.0|^12.0|^13.0",
+        "illuminate/routing": "^10.42.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.42.0|^11.0|^12.0|^13.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AlpineDigital\\LogDashboard\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlpineDigital\\LogDashboard\\LogDashboardServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
