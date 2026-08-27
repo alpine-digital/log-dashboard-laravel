@@ -1,5 +1,5 @@
 {
-    "name": "alpinedigital/log-dashboard-Laravel",
+    "name": "alpinedigital/log-dashboard-laravel",
     "description": "In-project log viewer for local development — reads the host project's own storage/logs, no SSH.",
     "type": "library",
     "license": "proprietary",

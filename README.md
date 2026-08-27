@@ -53,13 +53,13 @@ Windows/PowerShell.
 
 ```bash
 ddev auth ssh
-ddev composer require --dev alpinedigital/log-dashboard:@dev
+ddev composer require --dev alpinedigital/log-dashboard-laravel:@dev
 ```
 
 `ddev auth ssh` forwards your host SSH agent into the container (once per `ddev`
 session). You need an SSH key registered on your GitLab account — verify with
 `ssh -T git@gitlab.com` on the host. The service provider is auto-discovered.
-Update later with `ddev composer update alpinedigital/log-dashboard`.
+Update later with `ddev composer update alpinedigital/log-dashboard-laravel`.
 
 <details>
 <summary>Alternative: HTTPS + deploy token (no SSH)</summary>
@@ -71,7 +71,7 @@ Update later with `ddev composer update alpinedigital/log-dashboard`.
    ```bash
    ddev composer config --global gitlab-token.gitlab.com <token-username> <token>
    ddev composer config repositories.log-dashboard vcs https://gitlab.com/alpinedigital/log-dashboard.git
-   ddev composer require --dev alpinedigital/log-dashboard:@dev
+   ddev composer require --dev alpinedigital/log-dashboard-laravel:@dev
    ```
 
 </details>
@@ -103,7 +103,7 @@ Copy the bundled stub into your project's `.ddev/` to open the dashboard in a
 browser tab automatically after every `ddev start`:
 
 ```bash
-cp vendor/alpinedigital/log-dashboard/stubs/config.logdashboard.yaml .ddev/
+cp vendor/alpinedigital/log-dashboard-laravel/stubs/config.logdashboard.yaml .ddev/
 ddev restart
 ```
 
